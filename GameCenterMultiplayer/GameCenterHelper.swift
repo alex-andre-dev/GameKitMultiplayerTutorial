@@ -8,7 +8,7 @@
 import Foundation
 import GameKit
 
-protocol GameCenterHelperDelegate: class {
+protocol GameCenterHelperDelegate: AnyObject {
     func didChangeAuthStatus(isAuthenticated: Bool)
     func presentGameCenterAuth(viewController: UIViewController?)
     func presentMatchmaking(viewController: UIViewController?)
@@ -43,7 +43,7 @@ final class GameCenterHelper: NSObject, GKLocalPlayerListener {
     
     func presentMatchmaker(withInvite invite: GKInvite? = nil) {
         guard GKLocalPlayer.local.isAuthenticated,
-              let vc = createMatchmaker(withInvite: invite) else {
+              let vc = createMatchmaker() else {
             return
         }
         
@@ -52,12 +52,7 @@ final class GameCenterHelper: NSObject, GKLocalPlayerListener {
         delegate?.presentMatchmaking(viewController: vc)
     }
     
-    private func createMatchmaker(withInvite invite: GKInvite? = nil) -> GKMatchmakerViewController? {
-        
-        //If there is an invite, create the matchmaker vc with it
-        if let invite = invite {
-            return GKMatchmakerViewController(invite: invite)
-        }
+    private func createMatchmaker() -> GKMatchmakerViewController? {
         
         return GKMatchmakerViewController(matchRequest: createRequest())
     }
@@ -70,6 +65,7 @@ final class GameCenterHelper: NSObject, GKLocalPlayerListener {
         
         return request
     }
+    
 }
 
 

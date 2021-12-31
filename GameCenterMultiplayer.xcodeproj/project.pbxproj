@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,7 @@
 		20116AFF24AA23BC00EABDCF /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20116AFE24AA23BC00EABDCF /* GameModel.swift */; };
 		20116B0324AA4B9400EABDCF /* PlayerStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20116B0224AA4B9400EABDCF /* PlayerStatus.swift */; };
 		20116B0524AA4BCA00EABDCF /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20116B0424AA4BCA00EABDCF /* Player.swift */; };
+		ECCE897F26E33A77006894B2 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = ECCE897E26E33A77006894B2 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20116AFB24AA1E0400EABDCF /* GameKit.framework in Frameworks */,
+				ECCE897F26E33A77006894B2 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,8 +106,8 @@
 			isa = PBXGroup;
 			children = (
 				20116AFE24AA23BC00EABDCF /* GameModel.swift */,
-				20116B0224AA4B9400EABDCF /* PlayerStatus.swift */,
 				20116B0424AA4BCA00EABDCF /* Player.swift */,
+				20116B0224AA4B9400EABDCF /* PlayerStatus.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +128,9 @@
 			dependencies = (
 			);
 			name = GameCenterMultiplayer;
+			packageProductDependencies = (
+				ECCE897E26E33A77006894B2 /* SnapKit */,
+			);
 			productName = GameCenterMultiplayer;
 			productReference = 20116ADF24AA1A6100EABDCF /* GameCenterMultiplayer.app */;
 			productType = "com.apple.product-type.application";
@@ -153,6 +158,9 @@
 				Base,
 			);
 			mainGroup = 20116AD624AA1A6100EABDCF;
+			packageReferences = (
+				ECCE897D26E33A77006894B2 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 20116AE024AA1A6100EABDCF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -335,13 +343,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS3B5ULP9R;
+				DEVELOPMENT_TEAM = AQ8G69GT7J;
 				INFOPLIST_FILE = GameCenterMultiplayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = continepedro.GameCenterMultiplayer;
+				PRODUCT_BUNDLE_IDENTIFIER = alex.GameCenterMultiplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -354,13 +362,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FS3B5ULP9R;
+				DEVELOPMENT_TEAM = AQ8G69GT7J;
 				INFOPLIST_FILE = GameCenterMultiplayer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = continepedro.GameCenterMultiplayer;
+				PRODUCT_BUNDLE_IDENTIFIER = alex.GameCenterMultiplayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -389,6 +397,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		ECCE897D26E33A77006894B2 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		ECCE897E26E33A77006894B2 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECCE897D26E33A77006894B2 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 20116AD724AA1A6100EABDCF /* Project object */;
 }

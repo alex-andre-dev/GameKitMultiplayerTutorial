@@ -7,11 +7,12 @@
 
 import Foundation
 import UIKit
-import GameKit
 
 struct GameModel: Codable {
     var players: [Player] = []
     var time: Int = 60
+    var messages: String = ""
+    
 }
 
 extension GameModel {
